@@ -1,0 +1,52 @@
+{
+  "timestamp": "2025-12-28T18:33:34.251384",
+  "config": {
+    "max_iterations": 3,
+    "minibatch_size": 5,
+    "max_train_samples": 100,
+    "score_threshold": 0.7,
+    "verifier_checkpoint": "verifier_best.pt",
+    "scored_file": "scored_outputs.jsonl",
+    "original_file": "generations_google-gemma-2b-it_0_-1.jsonl",
+    "output_file": "evolved_prompts.json",
+    "device": "cuda"
+  },
+  "seed_prompts": {
+    "critique_prompt": "Review this solution step by step. Identify any errors in mathematical reasoning, calculations, or logic. Be specific about what went wrong.",
+    "refinement_prompt": "Based on the critique above, provide a corrected step-by-step solution. End your final answer with \\boxed{answer}."
+  },
+  "evolved_prompts": {
+    "critique_prompt": "Review this solution step by step. Identify any errors in mathematical reasoning, calculations, or logic. Be specific about what went wrong.",
+    "refinement_prompt": "Based on the critique above, provide a corrected step-by-step solution. End your final answer with \\boxed{answer}."
+  },
+  "history": [
+    {
+      "iteration": 1,
+      "component": "critique_prompt",
+      "minibatch_score_before": 0.6,
+      "minibatch_score_after": 0.6,
+      "accepted": false,
+      "best_val_score": 0.03385521257296205
+    },
+    {
+      "iteration": 2,
+      "component": "refinement_prompt",
+      "minibatch_score_before": 0.2,
+      "minibatch_score_after": 0.2,
+      "accepted": false,
+      "best_val_score": 0.03385521257296205
+    },
+    {
+      "iteration": 3,
+      "component": "critique_prompt",
+      "minibatch_score_before": 0.0,
+      "minibatch_score_after": 0.0,
+      "accepted": false,
+      "best_val_score": 0.03385521257296205
+    }
+  ],
+  "final_scores": {
+    "seed": 0.03385521257296205,
+    "best": 0.03385521257296205
+  }
+}

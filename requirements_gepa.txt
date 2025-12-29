@@ -1,0 +1,16 @@
+# Additional requirements for GEPA-based refiner optimization
+# Run: pip install -r requirements_gepa.txt
+
+# Core ML
+torch>=2.0.0
+transformers>=4.35.0
+
+# GEPA dependencies  
+tqdm
+numpy
+
+# For LiteLLM (if using API-based reflection)
+# litellm>=1.0.0
+
+# Utilities
+datasets  # For loading GSM8K directly if needed
